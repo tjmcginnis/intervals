@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tjmcginnis/intervals/blob/main/ramp.schema",
+  "title": "Ramp",
+  "description": "An interval specifying a ramp from one target wattage to another",
+  "type": "object",
+  "properties": {
+    "duration": {
+      "description": "The length of time to perform the interval",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "start": {
+      "description": "The target watts to begin the interval",
+      "type": "integer",
+      "minimum": 0
+    },
+    "finish": {
+      "description": "The target watts to end the interval",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "duration",
+    "start",
+    "finish"
+  ]
+}
